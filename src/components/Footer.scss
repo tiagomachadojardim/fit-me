@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Space+Mono&family=Work+Sans:wght@500&display=swap');
+
+footer {
+  background: rgba(252, 128, 25, 1);
+  color: white;
+  padding: 2% 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .footer-content {
+    width: 80%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+   
+    @media (max-width: 576px) {
+      flex-direction: column; 
+      gap: 10px;
+      text-align: center;
+    }
+
+    .footer-content-center {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      font-family: 'Poppins', sans-serif;
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+
+       
+        @media (max-width: 768px) {
+          font-size: 10px;
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Poppins', sans-serif;
+
+      
+      @media (max-width: 768px) {
+        font-size: 10px;
+      }
+    }
+
+    h4 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+
+     
+      @media (max-width: 768px) {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .footer-icon {
+    display: flex;
+    padding-bottom: 30px;
+    padding-top: 2%;
+    justify-content: center;
+    gap: 10px;
+  }
+}

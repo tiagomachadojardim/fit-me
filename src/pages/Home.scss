@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Space+Mono&family=Work+Sans:wght@500&display=swap');
+
+.home-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .home-content {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+
+    .home-text {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Poppins', sans-serif;
+      width: 80%;
+      margin-left: 35px;
+
+      span {
+        color: #FC8019;
+      }
+
+      h4 {
+        
+        display: flex;
+        align-content: flex-start;
+        padding-top: 1%;
+        gap: 10px;
+      }
+
+      p {
+        text-align: start;
+      }
+    }
+
+    .container-img {
+      width: 80%;
+      position: relative;
+
+      .img-1 {
+        width: 100%;
+        right: 0;
+        z-index: 1;
+        top: 0;
+        position: relative;
+      }
+
+      .img-2 {
+        position: absolute;
+        width: 30%;
+        right: 0;
+        z-index: 0;
+        bottom: 62px;
+      }
+    }
+  }
+
+  .dish-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  .home-restaurants {
+    display: flex;
+    width: 80%;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    font-size: 24px;
+
+    h4 {
+      padding-top: 2%;
+      padding-left: 2%;
+    }
+  }
+
+
+  @media (min-width: 1025px) {
+    .home-text h4 {
+      font-size: 40px;
+    }
+    .home-text img {
+      width: 50px;
+      height: 50px;
+    }
+    .home-img1{
+      width: 100%;
+
+
+    }
+    .home-restaurants {
+      font-size: 30px;
+    }
+    .dish-container {
+    
+      grid-template-columns: repeat(4, 1fr);
+    }
+   
+
+  }
+
+
+
+  
+  @media (max-width: 1024px) {
+    .home-text h4 {
+      font-size: 32px;
+    }
+    .home-text p {
+      font-size: 12px;
+    }
+    .home-text img {
+      width: 40px;
+      height: 40px;
+    }
+    .home-img1{
+      width: 100%;
+
+
+    }
+    .home-restaurants {
+      font-size: 20px;
+    }
+    .dish-container {
+      grid-template-columns: repeat(4, 1fr);
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .home-text h4 {
+      font-size: 26px;
+    }
+    .home-text img {
+      width: 30px;
+      height: 30px;
+    }
+    .home-img1{
+     display: none;
+
+
+    }
+    .dish-container {
+      grid-template-columns: repeat(2, 1fr);
+      width: 60%;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .home-text h4 {
+      font-size: 20px;
+    }
+    .home-restaurants {
+      font-size: 16px;
+    }
+    .home-text img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .container-img {
+      display: none;
+    }
+
+
+    .dish-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media (max-width: 320px) {
+    .home-text h4 {
+      font-size: 19px;
+    }
+    .home-restaurants {
+      font-size: 16px;
+    }
+    .home-text img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .container-img {
+      display: none;
+    }
+
+
+    .dish-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+
+
+
+
+
+
+
+
+}

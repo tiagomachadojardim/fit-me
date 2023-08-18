@@ -1,0 +1,113 @@
+.dish-card {
+  padding: 10px;
+  margin: 10px;
+  background: rgba(248, 248, 248, 1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  div {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    
+    justify-content: space-evenly;
+
+    p {
+      gap: 5px;
+      display: flex;
+      
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h3 {
+    margin-top: 6px;
+    font-size: 1rem;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    text-align: center;
+    justify-content: center;
+    margin-top: 3px;
+  }
+
+  @media (min-width: 1024px) {
+  
+
+    
+   
+  }
+
+
+
+  @media (max-width: 1024px) {
+    .dish-card {
+      padding: 8px;
+      margin: 8px;
+      font-size: 1rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin-top: 5px;
+    }
+
+    p {
+      font-size: 10px;
+      margin-top: 2px;
+    }
+  }
+
+
+
+
+
+
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .dish-card {
+      padding: 8px;
+      margin: 8px;
+    }
+
+    h3 {
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
+
+    p {
+     
+      margin-top: 2px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .dish-card {
+      padding: 6px;
+      margin: 6px;
+    }
+
+    h3 {
+      font-size: 0.8rem;
+      margin-top: 4px;
+    }
+
+    p {
+      font-size: 9px;
+      margin-top: 1px;
+    }
+  }
+}

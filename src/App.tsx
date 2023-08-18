@@ -1,26 +1,76 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './components/Login';
+import Register from './components/Register';
+import Footer from './components/Footer';
+import './App.scss';
+import Header from './components/Header';
+import Home from './pages/Home';
+import Menu from './components/Menu';
+import Restaurant from './pages/Restaurant';
+
+
+
+
+
+
+const App: React.FC = () => {
+
+  const [pageTitle, setPageTitle] = useState("Título Padrão");
+  
+  
+
+  
+  const handlePageTitleChange = (newTitle: string) => {
+    setPageTitle(newTitle);
+  };
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+
+   
+    <Router>
+      <div className="App">
+    
+   
+        <Routes>
+
+        <Route
+        path="/"
+        element={<Header pageTitle={pageTitle} />} />
+        <Route
+        path="/"
+        element={<Menu pageTitle={pageTitle} />} />
+        
+        <Route index 
+          element={
+          <Home  hideHeader={true} hideMenu={false} />} />
+
+
+          <Route path="/Login"
+           element={<Login handlePageTitleChange={handlePageTitleChange} hideHeader={false} hideMenu={true} />} />
+
+          <Route path="/Register" 
+          element={<Register handlePageTitleChange={handlePageTitleChange} hideHeader={false} hideMenu={true} />} />
+
+          <Route path="/Restaurant" element={<Restaurant hideHeader={true} hideMenu={false} />} />
+
+
+        </Routes>
+        
+
+        <Footer />
+
+      </div>
+    </Router>
+    
+  
   );
-}
+};
 
 export default App;
+
+

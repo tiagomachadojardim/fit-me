@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Space+Mono&family=Work+Sans:wght@500&display=swap');
+
+.login{
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+
+
+.login-container{
+
+display: flex;
+width: 30%;
+flex-direction: column;
+align-items: flex-start;
+font-family: 'Poppins', sans-serif ;
+
+margin-top: 20px;
+margin-bottom: 20px;
+
+
+
+font-size: 20px;
+  
+
+    div{
+        padding-top: 5%;
+        padding-bottom: 5%;
+        width: 100%;
+
+
+    }  
+      
+
+    input{
+        padding: 10px 0px 10px 2px;
+        border-radius: 10px;
+        border: 1px dashed orange;
+        width: 100%;
+    }
+
+    
+    p{
+        
+        font-size: 16px;
+       
+        .login-register{
+            text-decoration: none;
+            color: black;
+
+        }
+
+    }
+
+
+
+}
+}
+
+
+.login-button{
+    font-family: 'Poppins', sans-serif ;
+    font-size: 15px;
+    background-color: orange;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+    width: 80%;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+  }
+
+
+
+
+  .login-button.success {
+    background-color: #28a745; /* Cor verde para login bem-sucedido */
+  }
+  
+  .login-button.error {
+    background-color: #dc3545; /* Cor vermelha para login falhado */
+  }
+
+
+
+  @media (max-width: 576px) {
+  .login{
+    width: 100%;
+    justify-content: center;
+
+  }
+  }
+  
+
+  @media (min-width: 577px) and (max-width: 992px) {
+    .login-container {
+      width: 70%;
+      font-size: 18px;
+    }
+  }
+  
+ 
+  @media (min-width: 993px) {
+    .login-container {
+      width: 60%;
+    }
+  }
+
+
+
+  
