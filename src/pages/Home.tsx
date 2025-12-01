@@ -73,7 +73,8 @@ const HomePage: React.FC<HomePageProps> = ({  hideHeader,hideMenu}) => {
       <h4>Restaurants</h4>
       </div>
       <div className="dish-container">
-      {dishes.map((dish, index) => (
+      {dishes && dishes.length > 0 ? (
+        dishes.map((dish, index) => (
         
         <Link key={index}  to={`/Restaurant?dishName=${encodeURIComponent(dish.name)}
         &dishIndex=${index}
@@ -85,7 +86,10 @@ const HomePage: React.FC<HomePageProps> = ({  hideHeader,hideMenu}) => {
         `}>
         <DishCard dish={dish} index={index} />
       </Link>
-        ))}
+        ))
+      ) : (
+        <p>Carregando restaurantes...</p>
+      )}
       </div>
 
      
